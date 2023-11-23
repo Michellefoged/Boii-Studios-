@@ -1,0 +1,378 @@
+/*Styling*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'arial', bold;
+    background-color: white;
+}
+a {
+    text-decoration: none;
+}
+/*styles*/
+.forsidefooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.icons{
+    width: 60px;
+    }
+
+.icons-logo{
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 70px; /* Adjust as needed */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/*Top nav*/
+header{
+   flex: center;
+   justify-content: center;
+    display: flex;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header ul{
+    display: flex;
+    gap: 1vw;
+}
+
+header ul li{
+    display: flex;
+    
+    
+}
+
+header ul li.sidste{
+    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+header ul li a{
+padding: 10px 10px;
+text-decoration: none;
+color: black;
+flex-direction: column;
+z-index: 1000;
+font-size: 7vw;
+padding: 2vw 1vw;
+justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: large;
+font-weight:300;
+}
+
+
+/*Dropdown*/
+
+header ul li a:hover{
+   color: black;
+   border-radius: 20vw;
+
+}
+
+header ul li ul.dropdown li{
+    display: flex;
+    
+}
+
+
+header ul li ul.dropdown{
+    
+    position: absolute;
+    z-index: 999;
+    display: none;
+    overflow: hidden;
+    
+}
+
+
+
+ul li:hover ul.dropdown{
+    display: flex;
+    flex-direction: column;
+    border-radius:0vw 0vw 3vw 3vw;
+}
+
+/*burgermenu*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 0vw;
+    top: max(30vw);
+    height: 0px;
+    width: 25vw;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+
+}
+
+.burgerlist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vw 3vw;
+    gap: 0px;
+}
+
+.dropdown_menu ul li a{
+    padding:0.5vw 0.5vw;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.dropdown_menu ul li{
+    display: flex;
+    width: 100%;
+}
+
+.dropdown_menu.open{
+    height: 25vw;
+    overflow: visible;
+  }
+
+
+  .toggle_btn {
+    position: absolute;
+    right: 30px;
+    color: black;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+  }
+
+  /*Dropdown burger*/
+
+  .dropdown_menu ul li a:hover{
+    color: #185099;
+ }
+ 
+ .dropdown_menu ul li ul.dropdown li{
+     display: flex;
+     width: auto;
+ }
+ 
+ 
+ .dropdown_menu ul li .dropdown{
+     
+     position: absolute;
+     right: 20vw;
+     z-index: 1001;
+     display: none;
+    
+     /*overflow: hidden;*/
+     
+ }
+ 
+ 
+ .dropdown_menu ul li:hover ul.dropdown{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     border-radius:10px 0px 10px 10px;
+     overflow: hidden;
+     padding: 1vw 1vw;
+ }
+
+  
+
+/*-----media queries----*/
+@media screen and (max-width: 600px){
+  
+    .navbar li{
+      display: none;
+    }
+  
+    .toggle_btn{
+      display: block;
+      
+    }
+  
+    .dropdown_menu{
+      display: block;
+    }
+
+    .hide{
+        display: none;
+    }
+
+  }
+
+  /*burgermenu*/
+
+
+/*forside*/
+
+.forside{
+    display: flex;
+    width: 70%;
+    margin: 40px 15vw 10px ;
+
+
+}
+
+
+h1{
+    text-align: center;
+    color: #185099;
+    font-size: 60px;
+    font-weight: 900;
+    @media (max-width: 600px) {
+  
+            font-size: 35px; /* Adjust the font size for smaller screens */
+        }
+}
+
+/*forsidebilleder*/
+
+.image-pc {
+    display: block; /* Display on larger screens (default) */
+    width: 100%;
+   
+}
+
+.image-mobile {
+    display: none; /* Hide on larger screens (default) */
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Media query for screens 600px or smaller (typical mobile screens) */
+@media (max-width: 600px) {
+    .image-pc {
+        display: none; /* Hide on smaller screens */
+    }
+
+    .image-mobile {
+        display: block; /* Display on smaller screens */
+    }
+}
+
+
+footer {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-icons a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 10px;
+  }
+
+  /*underside 1, inspiration*/
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+/*video og billeder, række 1*/
+.container img,
+.container video {
+    max-width: 33%;
+    height: auto;
+    display: block;
+}
+
+/*video og billeder, række 2*/
+
+.container2 {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    
+}
+
+.container2 img{
+    max-width: 33%;
+    height: auto;
+    display: block;
+}
+
+/*reponsive skræmstørelses ændring*/
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container img,
+    .container video {
+        max-width: 100%; 
+    }
+
+    .container img {
+        order: 1; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container2 img {
+        max-width: 100%; 
+    }
+}
+
+.overskrift2{
+font-size: 30px;
+color: #185099;
+text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .overskrift2 {
+        font-size: 20px;  
+    }
+}
+
+/*underside 2, information*/
+.åbningstider-img{
+width: 100%;
+}
